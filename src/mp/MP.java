@@ -31,7 +31,7 @@ public class MP {
                 System.out.println("ausfxv");
                // Connection con;
                 Connection conn;
-                conn = DriverManager.getConnection("jdbc:mysql://localhost/mp?" +"user=root&password=9422349317");
+                conn = DriverManager.getConnection("jdbc:mysql://localhost/mp?" +"user=root&password=%");
                 System.out.println("ausfxv");
                 Statement st=conn.createStatement();
         ResultSet rs=st.executeQuery(Query);
