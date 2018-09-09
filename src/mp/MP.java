@@ -23,21 +23,22 @@ public class MP {
     public static void main(String[] args) {
         // TODO code application logic here
         
+        
          try {
-                String Query="SELECT * FROM senior_citizen WHERE s_id=1003";
+                String Query="SELECT * FROM senior_citizen";
                 System.out.println("ausfxv");
-                Class.forName("com.mysql.jdbc.Driver");
+                Class.forName("com.mysql.jdbc.Driver").newInstance();
                 System.out.println("ausfxv");
                // Connection con;
-                Connection con;
-                con = DriverManager.getConnection("http://127.0.0.1/phpmyadmin/tbl_structure.php?db=mp&table=senior_citizen&token=16b1138357102059861ad136974aafa4", "root", "9422349317");
+                Connection conn;
+                conn = DriverManager.getConnection("jdbc:mysql://localhost/mp?" +"user=root&password=9422349317");
                 System.out.println("ausfxv");
-                Statement st=con.createStatement();
+                Statement st=conn.createStatement();
         ResultSet rs=st.executeQuery(Query);
         rs.next();
         String sname=rs.getString(2);
         System.out.println("ausfxv");
-        con.close();
+        conn.close();
             } 
             catch (Exception e)
             {   
