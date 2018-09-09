@@ -25,19 +25,20 @@ public class MP {
         
         
          try {
-                String Query="SELECT * FROM senior_citizen";
+                String Query="SELECT DISTINCT area FROM senior_citizen";
                 System.out.println("ausfxv");
                 Class.forName("com.mysql.jdbc.Driver").newInstance();
                 System.out.println("ausfxv");
                // Connection con;
                 Connection conn;
-                conn = DriverManager.getConnection("jdbc:mysql://localhost/mp?" +"user=root&password=%");
+                conn = DriverManager.getConnection("jdbc:mysql://localhost/mp?" +"user=root&password=9422349317");
                 System.out.println("ausfxv");
                 Statement st=conn.createStatement();
         ResultSet rs=st.executeQuery(Query);
-        rs.next();
-        String sname=rs.getString(2);
-        System.out.println("ausfxv");
+        while (rs.next()) {
+                    String sname=rs.getString("area");
+                    System.out.println(sname);
+                }
         conn.close();
             } 
             catch (Exception e)
