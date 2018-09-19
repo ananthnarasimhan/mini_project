@@ -8,6 +8,7 @@ import javax.swing.JOptionPane;
 import java.awt.Toolkit;
 import java.awt.event.WindowEvent;
 import mp.SC_REGISTRATION_FORM;
+
 /**
  *
  * @author Admin
