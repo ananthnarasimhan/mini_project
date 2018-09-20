@@ -62,6 +62,7 @@ public class NewJFrame extends javax.swing.JFrame {
         setBackground(new java.awt.Color(102, 255, 102));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setExtendedState(6);
+        setPreferredSize(new java.awt.Dimension(1400, 700));
 
         jLabel1.setText("SERVICE TYPE");
 
